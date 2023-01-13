@@ -6,19 +6,7 @@
 Console.WriteLine("Введите количество программистов."); 
 int amount = Convert.ToInt32(Console.ReadLine());
 Console.Write($"{amount} программист");
-if (amount % 100 < 15) switch (amount % 100) // если последние 2 цифры меньше 15, для таких чисел отдельные окончания
-{
-    case 1:
-    break;
-    
-    case 2: case 3: case 4:
-    Console.WriteLine("a");
-    break;
-
-    default:
-    Console.WriteLine("ов");
-    break;
-}
+if (amount % 100 < 15 & amount % 100 > 10) Console.WriteLine("ов"); // с числами с окончанием 11-15 работаем отдельно
 else switch (amount % 10) // в остальных случаях работаем с последней цифрой числа, от которой зависит окончание
 {
     case 1:
